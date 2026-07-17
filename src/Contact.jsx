@@ -1,12 +1,21 @@
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPhone
+} from "react-icons/fa";
+
 function Contact(){
     return (
-        <section className="py-30 relative overflow-hidden">
+        <section className="py-30 relative">
             <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-3xl mx-auto relative px-auto z-10">
+      <div className="max-w-6xl mx-auto relative px-auto z-10">
         <div className="max-w-3xl mx-auto text-center ">
             <span className="inline-block text-lg font-semibold uppercase tracking-[0.2em] text-pink-700">
                 Get In Touch
@@ -21,13 +30,78 @@ function Contact(){
 
         </div>
 
-        <div className="max-w-3xl mx-auto px-6 py-12">
+        <div className=" mx-auto mt-10 grid grid-cols-1 lg:grid-cols-5 gap-12 items-start border-gray-200 rounded-2xl p-8 lg:p-16 bg-amber-50 shadow-lg">
+            {/*Left side*/}
+            <div className="space-y-10 lg:col-span-2">
+                
+            <div className="flex items-center gap-10">
+                <div>
+                    
+                    <FaMapMarkerAlt size={22} className="text-pink-600" />
+                </div>
+                <div>
+                    <h2 className="font-semibold text-taupe-800">Location</h2>
+                    <p className="text-gray-600">Dhaka, Bangladesh</p>
+                </div>
+            </div>
+
+            <div className="flex items-center gap-10">
+                <div>
+                    <FaEnvelope size={22} className="text-pink-600" />
+                </div>
+                <div>
+                    <h2 className="font-semibold text-taupe-800">Email</h2>
+                    <p className="text-gray-600">jarifatasnim13@gmail.com</p>
+                </div>
+            </div>
+            <div className="flex items-center gap-10">
+                <div>
+                    <FaPhone size={22} className="text-pink-600" />
+                </div>
+                <div>
+                    <h2 className="font-semibold text-taupe-800">Phone </h2>
+                    <p className="text-gray-600">+880 1984284 806</p>
+                </div>
+            </div>
+
+            <div className="flex items-center gap-10  py-5">
+                
+                <div>
+                    <h2 className="font-semibold text-taupe-800">Follow Me</h2>
+                     <div className="flex gap-10 mt-5">
+                        <a
+                            href="https://github.com/yourusername"
+                            className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 hover:bg-pink-400 hover:text-white transition"
+                        >
+                            <FaGithub size={22} />
+                        </a>
+
+                        <a
+                            href="https://linkedin.com/in/yourusername"
+                            className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 hover:bg-pink-400 hover:text-white transition"
+                        >
+                            <FaLinkedin size={22} />
+                        </a>
+
+                        <a
+                            href="https://facebook.com/yourusername"
+                            className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 hover:bg-pink-400 hover:text-white transition"
+                        >
+                            <FaFacebook size={22} />
+                        </a>
+                     </div>
+                </div>
+            </div>
+
+            </div>
+
+            <div className="lg:col-span-3">
             <form className="space-y-6">
                 {/* Name */}
                 <div>
                 <label
                     htmlFor="name"
-                    className="block text-lg font-semibold text-taupe-800 mb-2"
+                    className="block text-base font-semibold text-taupe-800 mb-2"
                 >
                     Name
                 </label>
@@ -44,7 +118,7 @@ function Contact(){
                 <div>
                 <label
                     htmlFor="email"
-                    className="block text-lg font-semibold text-taupe-800 mb-2"
+                    className="block text-base font-semibold text-taupe-800 mb-2"
                 >
                     Email
                 </label>
@@ -60,7 +134,7 @@ function Contact(){
                 <div>
                 <label
                     htmlFor="message"
-                    className="block text-lg font-semibold text-taupe-800 mb-2"
+                    className="block text-base font-semibold text-taupe-800 mb-2"
                 >
                     Message
                 </label>
@@ -79,6 +153,9 @@ function Contact(){
 
             </form>
         </div>
+        </div>
+
+        
         
 
     
